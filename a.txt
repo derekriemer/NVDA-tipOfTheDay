@@ -1,0 +1,113 @@
+EEEEEE
+======================================================================
+ERROR: test_app_exists (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+======================================================================
+ERROR: test_app_is_correct (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+======================================================================
+ERROR: test_get_invalid_tip_name_is_None (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+======================================================================
+ERROR: test_iterateTips (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+======================================================================
+ERROR: test_malformedJson (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+======================================================================
+ERROR: test_non_existant_file (test_TipsReader.TipsTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\derek_2\Google Drive\tip_of_the_day\tests\test_TipsReader.py", line 11, in setUp
+    self.t1 = Tips(os.path.join(os.path.dirname(__file__), "assetts", "t1.json"))
+  File "globalPlugins\tipsReader.py", line 13, in __init__
+    self.tipsDict = j = json.load(tipsFile)
+  File "C:\Python27\lib\json\__init__.py", line 290, in load
+    **kw)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 14 column 13 (char 341)
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+FAILED (errors=6)

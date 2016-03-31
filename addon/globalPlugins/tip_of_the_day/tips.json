@@ -1,0 +1,22 @@
+{
+    "type" : "app",
+    "appname" : "None",
+    "tips" : {
+        "Testing": {
+            "level" : ["beginner"],
+            "description": "This is a test tip.\nIt may even span multiple lines!"
+        },
+        "Testing a tip 1" : {
+            "level" : ["beginner"],
+            "description" : "This is another test tip. It may also span multiple lines.\nDoes it break at the beginning of this sentence?"
+        },
+        "The NVDA Key" : {
+            "level" : ["beginner"],
+            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu."
+        },
+        "Accessing the NVDA Menu." : {
+            "level" : ["beginner"],
+            "description" : "To access the NVDA menu, you should be able to press the NVDA key, and the letter N at the same time."
+        }
+    }
+}

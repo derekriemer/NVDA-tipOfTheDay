@@ -1,0 +1,7 @@
+Things are in increasing complexity order.
+* Create tips file format, probably xml for ease of flexability. Either that, or maybe store them in a relational database. Maybe use sqlite.
+* Design process for tip file naming conventions, Needs to be such that people can create tips files for specific apps.
+* Create program to ease the process of tip creation and distribute it to interested parties who want to add tips to the addon.
+* create program to merge tip files. It needs to handle conflicting tips.
+* create globalPlugin handler to control global plugin and to manage tips. This will have the gui, and all that good stuff.
+

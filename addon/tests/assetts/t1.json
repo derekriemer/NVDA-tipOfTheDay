@@ -1,0 +1,18 @@
+{
+    "type" : "app",
+    "appname" : "winword",
+    "tips" : {
+        "using word": {
+            "level" : ["beginner"],
+            "description": "fish"
+        },
+        "words famous gripe" : {
+            "level" : ["beginner"],
+            "description" : "bad"
+        },
+        "Ribbon menu basic navigation": {
+            "level" : ["beginner", "intermediate"],
+            "description": "If you press the down arrow from any  ribbon menu, you will enter that item.\n            Then, press ctrl+right arrow to move right by each grouping of item in that tab, such as font info, style, edit and so on."
+        }
+    }
+}
