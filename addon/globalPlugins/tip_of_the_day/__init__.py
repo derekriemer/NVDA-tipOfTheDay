@@ -2,14 +2,16 @@
 #copyright Derek Riemer 2016.
 #This code is GPL. See NVDA's license.
 #All of NVDA's license and copying conditions apply here, including the waranty disclosure.
-import addonHandler
 import datetime
+import os
+import time
+import addonHandler
 import globalPluginHandler
 import globalVars
-import os
 import queueHandler
-import time
 import tipConfig
+#We need to initialize the tip config before we import anything that relys on it.
+tipConfig.initialize()
 import tipDialog
 from logHandler import log
 #from tipsReader import Tips
@@ -63,19 +65,18 @@ class TipTimeManager:
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
-		tipConfig.initialize()
 		conf = tipConfig.conf
 		try:
-			confVal = conf["lastUse"]
+			confVal = conf["internal"]["lastUse"]
 		except KeyError:
-			conf["lastUse"] = time.time()
-			confVal = conf["lastUse"]
+			conf["internal"]["lastUse"] = time.time()
+			confVal = conf["internal"]["lastUse"]
 			conf.save()
 		lastUse = TipTimeManager(confVal)
 		if lastUse.hasMoreThanADayPassed():
-			conf["lastUse"] = time.time()
+			conf["internal"]["lastUse"] = time.time()
 			conf.save()
-			lastUse = TipTimeManager(conf['lastUse'])
+			lastUse = TipTimeManager(conf['internal']['lastUse'])
 			queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready.
 		self.purger() #gracefully remove dead timers.
 		lastUse.alert(self) # runs a timer over and over every few minutes, and when the specified action happens, calls -the callback specified.
@@ -84,7 +85,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready. Seems to prevent an issue with the dialog not appearing thince this gets called randomly.
 		lastUse = TipTimeManager(time.time())
 		config = tipConfig.conf
-		config["lastUse"] = lastUse.toNormalizedTime()
+		config["internal"]["lastUse"] = lastUse.toNormalizedTime()
 		config.save()
 		lastUse.alert(self) #register callBack again. If we die before the next day, that's fine, but we want to make sure the tip will pop up in one day if need be.
 	

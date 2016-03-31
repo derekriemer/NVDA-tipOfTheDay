@@ -2,20 +2,26 @@
 #copyright Derek Riemer 2016.
 #This code is GPL. See NVDA's license.
 #All of NVDA's license and copying conditions apply here, including the waranty disclosure.
+import os
+from cStringIO import StringIO
 import config
 import configobj
-import os
 import validate
-from cStringIO import StringIO
 #adapted from the config in OCR, to be a module.
+#Uses some of NVDA's internal conventions as well.
+
+configspec = StringIO("""
+	[internal]
+		lastUse=float(min=0 default=0)
+	[user]
+		level = option('not sure', 'beginner', 'intermediate', 'advanced', default='not sure')
+""")
+
 class TipConf(object):
 	def __init__(self):
 		""" Initializes config for the tip of the day addon.  """
-		configspec = StringIO("""
-		lastUse=float(min=0 default=0)
-		""")
 		path = os.path.join(config.getUserDefaultConfigPath(), "tip_of_day.ini")
-		self._config  = configobj.ConfigObj(path, configspec=configspec)
+		self._config  = configobj.ConfigObj(path, configspec=configspec, indent_type = '\t')
 		val = validate.Validator()
 		self._config.validate(val)
 

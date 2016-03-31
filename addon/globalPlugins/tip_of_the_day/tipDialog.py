@@ -1,8 +1,13 @@
-import globalPlugins
-import gui
+#tipDialog: dialog and gui utilities for the tip of the day addon.
+#copyright Derek Riemer 2016.
+#This code is GPL. See NVDA's license.
+#All of NVDA's license and copying conditions apply here, including the waranty disclosure.
 import os
-import tipsReader
 import wx
+import gui
+import tipConfig
+import tipsReader
+import queueHandler
 from logHandler import log
 from tipsReader import Tips
 
@@ -118,6 +123,31 @@ def create():
 
 
 def initialize():
+	conf = tipConfig.conf
+	if conf['user']['level'] == 'not sure': #The default pop up a dialog.
+		def pop():
+			choices = [
+				#Translators: Choice for the level of expertise the user feels they have with windows.
+				_("beginner"),
+				#Translators: Choice for the level of expertise the user feels they have with Windows.
+				_("intermediate"),
+				#Translators: Choice for the level of expertise the user feels they have with windows.
+				_("advanced"),
+			]
+			dialog = wx.SingleChoiceDialog(gui.mainFrame, 
+				#translators: title of the panel that contains the choice of level of expertise.
+				_("Select how familiar you are with  using your computer."), 
+				#translators: title of a dialog asking the user how familiar they are with their computer.
+				_("Familiarity With Windows"), choices=choices)
+			dialog.SetSelection(0) #assume they are a beginner.
+			gui.mainFrame.prePopup()
+			ret = dialog.ShowModal()
+			gui.mainFrame.postPopup()
+			if ret == wx.ID_OK:
+				level = choices[dialog.GetSelection()]
+				conf['user']['level'] = level
+				conf.save()
+		wx.CallAfter(pop) #pop the dialog when ready.
 	menu = gui.mainFrame.sysTrayIcon.menu
 	#Translators: Message for getting a tip of the day manually.
 	item = menu.Append(wx.ID_ANY, _("Tip of the day"))
