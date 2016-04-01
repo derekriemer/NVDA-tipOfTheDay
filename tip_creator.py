@@ -8,7 +8,7 @@ def save():
 
 def list():
 	for i in tips["tips"].keys():
-		print i
+		print " ".join(tips["tips"][i]['level'])+":", i
 
 
 def add(title, level, description):

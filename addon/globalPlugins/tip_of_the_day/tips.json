@@ -1,22 +1,122 @@
 {
-    "type" : "app",
+    "type" : "global",
     "appname" : "None",
     "tips" : {
-        "Testing": {
-            "level" : ["beginner"],
-            "description": "This is a test tip.\nIt may even span multiple lines!"
-        },
-        "Testing a tip 1" : {
-            "level" : ["beginner"],
-            "description" : "This is another test tip. It may also span multiple lines.\nDoes it break at the beginning of this sentence?"
-        },
         "The NVDA Key" : {
-            "level" : ["beginner"],
-            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu."
+            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
         },
         "Accessing the NVDA Menu." : {
-            "level" : ["beginner"],
-            "description" : "To access the NVDA menu, you should be able to press the NVDA key, and the letter N at the same time."
+            "description" : "To access the NVDA menu, you should be able to press the NVDA key, and the letter N at the same time.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Getting help" : {
+            "description" : "To find help, use the NVDA key and N (open the NVDA menu), then go to help. There is a users guide and quick key reference sheet.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Preferences" : {
+            "description" : "To customize NVDA, use the NVDA key and N to open the NVDA menu, and then open the preferences sub-menu. Then press enter on the preferences you want to change and make the changes.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Making NVDA start automatically when your computer starts" : {
+            "description" : "You can make NVDA boot automatically when your computer starts. To do this: \\n1.Go to the NVDA menu and then preferences.\\n2.Open the general settings.\\n3. Go to the option that tells you about starting NVDA after you log onto windows.\\n4. Check this item.\\n5. Press the Okay button, or simply press enter.",
+            "level" : [
+                "beginner",
+                "intermediate"
+            ]
+        },
+        "Making NVDA start on the logon screen." : {
+            "description" : "You can configure NVDA to start on the windows logon screen. Press next to learn how.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Making NVDA speek on the logon screen" : {
+            "description" : "Here is how to make NVDA speak on the logon screen. The logon screen in windows is where you put your password when you log in. This will also make NVDA read secure screens like those that come up when you install programs. Note, that you must be a system administrator to do this. If you had to have someone who had permition install NVDA for you, you probably are not a system administrator. If you are a system administrator, follow these steps, otherwise, you need to consult your system administrator for more information.\\n1. Press NVDA+N to go to the NVDA menu. Remember that the NVDA key is the key you configured earlier which is probably insert or caps-lock.\\n2. Press the down arrow to get to the preferences menu.\\n3. Go to the general settings.\\n4. Press enter when you get there, and press tab until you hear NVDA say \"Use NVDA on the Windows logon screen (requires administrator privileges)\" and then press the space bar. This will check the box.\\n5. Now, press enter to activate the okay button, and then let NVDA administrator privlages.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Make NVDA speak on the logon and secure screens." : {
+            "description" : "Press the NVDA Key.\\nNow navigate to the general settings.\\nNow press enter. and go to the option \"Use NVDA on the Windows logon screen (requires administrator privileges)\" then press space to check it, and press enter.",
+            "level" : [
+                "intermediate"
+            ]
+        },
+        "Make NVDA speak on secure screens." : {
+            "description" : "Select the \"Use NVDA on the Windows logon screen (requires administrator privileges)\" option from the general settings dialog.",
+            "level" : [
+                "advanced"
+            ]
+        },
+        "Making NVDA speak your language" : {
+            "description" : "You can make NVDA speak your language. If you do not speak english natively, this is a tip you should read.\\n1. To make the NVDA interface speak your language, select your language from the general settings dialog.\\n2. Now, after NVDA restarts, select your voice language by sleecting the appropriate language from the voice settings dialog.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Making NVDA Restart" : {
+            "description" : "If you installed NVDA (you aren't running a portible copy) you can quickly restart NVDA. To do this, press Ctrl+Alt+n.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Exiting NVDA From the NVDA Menu." : {
+            "description" : "To exit NVDA you can go to the NVDA menu and press the exit button. then press the ookay button when you get there. You can also restart NVDA from this dialog.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Exiting NVDA." : {
+            "description" : "If you want to exit NVDA, you can either press NVDA+q, or select the exit item from the NVDA menu.",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Exiting NVDA with a shortcut key." : {
+            "description" : "You can always exit NVDA by pressing NVDA+q. This brings up the same dialog that selecting exit from the NVDA menu shows you.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Laptop Keyboard layout" : {
+            "description" : "If you use a laptop, or if you would prefer to not use the number pad to control NVDA, you can set NVDA up to use a laptop keyboard layout. To do this, select laptop keyboard layout from the keyboard preferences.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Input help mode" : {
+            "description" : "If you wish to learn about what a key does, then you can toggle input help mode on or off. To do this, press NVDA+1 (the number 1) and then press any key. This should help you learn what keys do. To exit input help mode, press NVDA+1 again.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
         }
     }
 }

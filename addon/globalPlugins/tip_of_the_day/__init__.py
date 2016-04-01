@@ -13,6 +13,7 @@ import tipConfig
 #We need to initialize the tip config before we import anything that relys on it.
 tipConfig.initialize()
 import tipDialog
+import wx
 from logHandler import log
 #from tipsReader import Tips
 from threading import Timer
@@ -77,7 +78,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			conf["internal"]["lastUse"] = time.time()
 			conf.save()
 			lastUse = TipTimeManager(conf['internal']['lastUse'])
-			queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready.
+			if conf["user"]["level"] != "not sure":
+				queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready.
 		self.purger() #gracefully remove dead timers.
 		lastUse.alert(self) # runs a timer over and over every few minutes, and when the specified action happens, calls -the callback specified.
 	

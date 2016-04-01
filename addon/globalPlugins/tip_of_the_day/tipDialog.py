@@ -11,7 +11,7 @@ import queueHandler
 from logHandler import log
 from tipsReader import Tips
 
-def confDialog(evt = None):
+def confDialog(evt = None, createAfter = False):
 	conf = tipConfig.conf
 	choices = [
 		#Translators: Choice for the level of expertise the user feels they have with windows.
@@ -38,12 +38,13 @@ def confDialog(evt = None):
 		level = choices[dialog.GetSelection()]
 		conf['user']['level'] = level
 		conf.save()
+		if createAfter:
+			wx.CallAfter(create)
 
 class TipDialog(wx.Frame):
 	def __init__(self):
 		#Translators: The title of the tip of the day dialog.
 		super(TipDialog, self).__init__(gui.mainFrame, wx.ID_ANY, title=_("Tip Of The Day"))
-		self.new = True # no tips exist yet and we are needing more.
 		self.panel  = panel = wx.Panel(self, wx.ID_ANY)
 		mainSizer=wx.BoxSizer(wx.VERTICAL)
 		tipSizer = wx.BoxSizer(wx.VERTICAL)
@@ -51,11 +52,11 @@ class TipDialog(wx.Frame):
 		if not self.tips:
 			return #Critical error.
 		self.index=tipConfig.conf["internal"]["index"]
+		self.level = tipConfig.conf["user"]["level"]
 		self.title = item = wx.StaticText(panel)
 		tipSizer.Add(item)
 		self.edit = item = wx.TextCtrl(panel, size = (500,500), style =  wx.TE_READONLY|wx.TE_MULTILINE)
 		tipSizer.Add(item)
-		self.prepEdit()
 		mainSizer.Add(tipSizer, border=20,flag=wx.LEFT|wx.RIGHT|wx.TOP)
 		buttonSizer=wx.BoxSizer(wx.HORIZONTAL)
 		self.back = item = wx.Button(panel, wx.ID_BACKWARD)
@@ -67,29 +68,37 @@ class TipDialog(wx.Frame):
 		self.forward = item = wx.Button(panel, wx.ID_FORWARD)
 		self.Bind(wx.EVT_BUTTON, self.onForward, item)
 		buttonSizer.Add(item)
-		self.prepButtons()
 		mainSizer.Add(buttonSizer,border=20,flag=wx.LEFT|wx.RIGHT|wx.BOTTOM)
 		mainSizer.Fit(panel)
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.edit.Bind(wx.EVT_KEY_DOWN, self.onKeyDown)
 		self.SetSizer(mainSizer)
 		self.edit.SetFocus()
+		self.cache = []
+		self.superIndex = 0
+		for i in range(len(self.tips)):
+			if  self.level in self.tips[i][1]["level"]:
+				self.cache.append(i)
+				if i == self.index:
+					self.superIndex = len(self.cache)-1
+		self.prepEdit()
+		self.prepButtons()
 
 	def prepEdit(self):
-		title, contents = self.tips[self.index]
+		title, contents = self.tips[self.cache[self.superIndex]]
 		self.title.SetLabel(title)
 		self.edit.SetValue(contents['description'])
 
 	def prepButtons(self):
 		#back button
-		if self.index == 0:
+		if self.superIndex == 0:
 			self.back.Enable(False)
 			self.back.Hide()
 		else:
 			self.back.Enable(True)
 			self.back.Show()
 		#Forward button:
-		if self.index == len(self.tips)-1:
+		if self.superIndex == len(self.cache)-1:
 			self.forward.Enable(False)
 			self.forward.Hide()
 		else:
@@ -97,13 +106,13 @@ class TipDialog(wx.Frame):
 			self.forward.Show()
 
 	def onForward(self, evt):
-		self.index += 1
+		self.superIndex += 1
 		self.prepEdit()
 		self.prepButtons()
 		self.edit.SetFocus()
 
 	def onBack(self, evt):
-		self.index -= 1
+		self.superIndex -= 1
 		self.prepEdit()
 		self.prepButtons()
 		self.edit.SetFocus()
@@ -123,7 +132,7 @@ class TipDialog(wx.Frame):
 
 	def save(self):
 		""" Saves the config. """
-		tipConfig.conf["internal"]["index"] = self.index
+		tipConfig.conf["internal"]["index"] = self.cache[self.superIndex]
 		tipConfig.conf.save()
 
 def create():
@@ -144,7 +153,7 @@ def create():
 def initialize():
 	conf = tipConfig.conf
 	if conf['user']['level'] == 'not sure': #The default pop up a dialog.
-		wx.CallAfter(confDialog) #pop the dialog when ready.
+		wx.CallAfter(confDialog, createAfter = True) #pop the dialog when ready.
 	menu = gui.mainFrame.sysTrayIcon.menu
 	prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 	#Translators: Message for getting a tip of the day manually.
