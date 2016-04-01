@@ -1,14 +1,38 @@
 {
     "type" : "app",
-    "appname" : "winword",
+    "appname" : "None",
     "tips" : {
-        "using word": {
-            "level" : ["beginner"],
-            "description": "fish"
+        "The NVDA Key" : {
+            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu."
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ],
         },
-        "words famous gripe" : {
-            "level" : ["beginner"],
-            "description" : "bad"
+        "Accessing the NVDA Menu." : {
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ],
+            "description" : "To access the NVDA menu, you should be able to press the NVDA key, and the letter N at the same time."
+        },
+        "Getting help" : {
+            "description" : "To find help, use the NVDA key and N (open the NVDA menu), then go to help. There is a users guide and quick key reference sheet.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Preferences" : {
+            "description" : "To customize NVDA, use the NVDA key and N to open the NVDA menu, and then open the preferences sub-menu. Then press enter on the preferences you want to change and make the changes.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
         }
     }
 }
