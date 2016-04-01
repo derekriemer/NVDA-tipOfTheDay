@@ -8,6 +8,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 import json
 sys.path.remove(sys.path[-1])
 #end-snippet.
+import collections
 
 class Tips:
 
@@ -15,9 +16,9 @@ class Tips:
 		self.tipsDict = j=None
 		self.tips = []
 		with open(fn,"r") as tipsFile:
-			self.tipsDict = j = json.load(tipsFile)
+			self.tipsDict = j = json.load(tipsFile, object_pairs_hook=collections.OrderedDict)
 		if j and j['tips']:
-			self.tips.extend(j['tips'].keys()) # load dict into self.
+			self.tips.extend(j['tips'].items()) # load dict into self by replacing it with tuples.
 		self.app=None
 		if j and j.get('type') == 'app':
 			#app specific tips.
