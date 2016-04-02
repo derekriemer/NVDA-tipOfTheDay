@@ -110,12 +110,14 @@ class TipDialog(wx.Frame):
 		self.prepEdit()
 		self.prepButtons()
 		self.edit.SetFocus()
+		self.edit.SelectAll()
 
 	def onBack(self, evt):
 		self.superIndex -= 1
 		self.prepEdit()
 		self.prepButtons()
 		self.edit.SetFocus()
+		self.edit.SelectAll()
 
 	#Code from the NVDA Log Viewer. See source/gui/logViewer.py for the exact code.
 	def onKeyDown(self, evt):
