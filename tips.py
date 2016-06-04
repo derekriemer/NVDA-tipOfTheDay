@@ -11,15 +11,14 @@ class TipsDisplay(wx.Panel):
 		@var tip: the tiip object which contains the tip to edit. If None we are adding a tip.
 		@type tip: Tip
 		"""
-		wx.Panel.__init(self, parent)
+		super(TipsDisplay,self).__init__(parent, size=(800,600))
+		self.parent = parent
 		if tip is None:
 			self.parent.SetTitle("Add A Tip")
-			title = ""
-			text = ""
+			title=""
 		else:
-			self.parent.SetTitle("Edit Tip {0}".format(tip.name))
-			title = tip.name
-			text = tip.body
+			self.parent.SetTitle("edit"+tip[0])
+			title = tip[0]
 		sizer = wx.BoxSizer(wx.VERTICAL)
 		contents_sizer = wx.BoxSizer(wx.HORIZONTAL)
 		title_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -66,18 +65,18 @@ class TipsDisplay(wx.Panel):
 		sizer.Add(choices_sizer)
 		self.SetSizer(sizer)
 		self.Center()
-		self.ShowModal()
 
 class TipList(wx.Panel):
 	def __init__(self, parent):
-		wx.Panel.__init__(self, parent)
+		wx.Panel.__init__(self, parent, wx.ID_ANY, size=(800,600))
 		self.parent = parent
-		main_sizer = wx.BoxSizer(wx.HORIZONTAL)
 		choices = []
+		main_sizer = wx.BoxSizer(wx.VERTICAL)
 		tips = openTips("tips.json")
 		for tip in tips["tips"]:
 			choices.append(tip)
-		self.list_box = list_box = wx.ListBox(self, wx.ID_ANY, choices=choices)
+		self.choices = choices
+		self.list_box = list_box = wx.Choice(self, wx.ID_ANY, choices=choices)
 		main_sizer.Add(list_box)
 		button_sizer = wx.BoxSizer(wx.VERTICAL)
 		add_tip_button = wx.Button(self, wx.ID_ANY, label="&Add")
@@ -85,10 +84,11 @@ class TipList(wx.Panel):
 		button_sizer.Add(add_tip_button)
 		main_sizer.Add(button_sizer)
 		self.SetSizer(main_sizer)
-		self.SetFocus()
+		main_sizer.Fit(self)
+		self.list_box.SetFocus()
 
 	def onAdd(self, evt):
-		
+		self.parent.notify(evt)
 
 
 
@@ -105,15 +105,32 @@ app=wx.App()
 class Frame(wx.Frame):
 	def __init__(self, parent, title):
 		super(Frame,self).__init__(parent, title=title,size=(800,600))
-		self.panel = panel = TipList(self)
-		self.Show()
+		sizer = wx.BoxSizer(wx.VERTICAL)
+		self.main = main = TipList(self)
+		sizer.Add(main)
+		self.display = display = TipsDisplay(self)
+		sizer.Add(display)
+		main.Show()
+		display.Hide()
+		self.SetSizer(sizer)
 		self.Center()
+		self.main = True
 
+	def notify(self, evt):
+		if self.main:
+			self.main.Hide()
+			self.display.Show()
+		else:
+			self.display.Hide()
+			self.main.Show()
+		self.Layout()
+		self.main = not self.main
+		self.Bind
 
 
 
 if __name__=='__main__':
 	frame=Frame(None,"Tip manager.")
 	frame.Show()
-	app.MainLoop()
+		app.MainLoop()
 

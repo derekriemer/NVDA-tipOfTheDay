@@ -1,9 +1,9 @@
 {
     "type" : "global",
-    "appname" : "None",
+    "appname" : null,
     "tips" : {
         "The NVDA Key" : {
-            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu.",
+            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\r\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -16,6 +16,12 @@
                 "beginner",
                 "intermediate",
                 "advanced"
+            ]
+        },
+        "check time and date" : {
+            "description" : "To check the time, press the nvda key and f12.\r\nTo check the date press nvda f12 twice quickly",
+            "level" : [
+                "beginner"
             ]
         },
         "Getting help" : {
@@ -35,7 +41,7 @@
             ]
         },
         "Making NVDA start automatically when your computer starts" : {
-            "description" : "You can make NVDA boot automatically when your computer starts. To do this: \\n1.Go to the NVDA menu and then preferences.\\n2.Open the general settings.\\n3. Go to the option that tells you about starting NVDA after you log onto windows.\\n4. Check this item.\\n5. Press the Okay button, or simply press enter.",
+            "description" : "You can make NVDA boot automatically when your computer starts. To do this:\r\n1.Go to the NVDA menu and then preferences.\r\n2.Open the general settings.\r\n3. Go to the option that tells you about starting NVDA after you log onto windows.\r\n4. Check this item.\r\n5. Press the Okay button, or simply press enter.",
             "level" : [
                 "beginner",
                 "intermediate"
@@ -50,13 +56,20 @@
             ]
         },
         "Making NVDA speek on the logon screen" : {
-            "description" : "Here is how to make NVDA speak on the logon screen. The logon screen in windows is where you put your password when you log in. This will also make NVDA read secure screens like those that come up when you install programs. Note, that you must be a system administrator to do this. If you had to have someone who had permition install NVDA for you, you probably are not a system administrator. If you are a system administrator, follow these steps, otherwise, you need to consult your system administrator for more information.\\n1. Press NVDA+N to go to the NVDA menu. Remember that the NVDA key is the key you configured earlier which is probably insert or caps-lock.\\n2. Press the down arrow to get to the preferences menu.\\n3. Go to the general settings.\\n4. Press enter when you get there, and press tab until you hear NVDA say \"Use NVDA on the Windows logon screen (requires administrator privileges)\" and then press the space bar. This will check the box.\\n5. Now, press enter to activate the okay button, and then let NVDA administrator privlages.",
+            "description" : "Here is how to make NVDA speak on the logon screen. \r\nThe logon screen in windows is where you put your password when you log in. This will also make NVDA read secure screens like those that come up when you install programs. Note, that you must be a system administrator to do this. If you had to have someone who had permission install NVDA for you, you probably are not a system administrator. If you are a system administrator, follow these steps, otherwise, you need to consult your system administrator for more information.\r\n1. Press NVDA+N to go to the NVDA menu. Remember that the NVDA key is the key you configured earlier which is probably insert or caps-lock.\r\n2. Press the down arrow to get to the preferences menu.\r\n3. Go to the general settings.\r\n4. Press enter when you get there, and press tab until you hear NVDA say \"Use NVDA on the Windows logon screen (requires administrator privileges)\" and then press the space bar. This will check the box.\r\n5. Now press tab and you'll hear \"Use currently saved settings on the logon and other secure screens (requires administrator privileges)\"\r\n6. Press this button and press the yes button there.\r\n7. Now press okay when the general settings dialog comes back up.",
             "level" : [
                 "beginner"
             ]
         },
+        "Customize how NVDA behaves on an app per app basis" : {
+            "description" : "Want to change the way NVDA behaves in a specific app? Just have that app focused and press NVDA Control P",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
         "Make NVDA speak on the logon and secure screens." : {
-            "description" : "Press the NVDA Key.\\nNow navigate to the general settings.\\nNow press enter. and go to the option \"Use NVDA on the Windows logon screen (requires administrator privileges)\" then press space to check it, and press enter.",
+            "description" : "Press the NVDA Key.\r\nNow navigate to the general settings.\r\nNow press enter. and go to the option \"Use NVDA on the Windows logon screen (requires administrator privileges)\" then press space to check it, and press enter.",
             "level" : [
                 "intermediate"
             ]
@@ -68,7 +81,7 @@
             ]
         },
         "Making NVDA speak your language" : {
-            "description" : "You can make NVDA speak your language. If you do not speak english natively, this is a tip you should read.\\n1. To make the NVDA interface speak your language, select your language from the general settings dialog.\\n2. Now, after NVDA restarts, select your voice language by sleecting the appropriate language from the voice settings dialog.",
+            "description" : "You can make NVDA speak your language. If you do not speak English natively, this is a tip you should read.\r\n1. To make the NVDA interface speak your language, select your language from the general settings dialog.\r\n2. Now, after NVDA restarts, select your voice language by selecting the appropriate language from the voice settings dialog.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -84,7 +97,7 @@
             ]
         },
         "Exiting NVDA From the NVDA Menu." : {
-            "description" : "To exit NVDA you can go to the NVDA menu and press the exit button. then press the ookay button when you get there. You can also restart NVDA from this dialog.",
+            "description" : "To exit NVDA you can go to the NVDA menu and press the exit button. then press the okay button when you get there. You can also restart NVDA from this dialog.",
             "level" : [
                 "beginner"
             ]
@@ -110,8 +123,178 @@
                 "advanced"
             ]
         },
+        "Where am I" : {
+            "description" : "Pressing NVDA + Tab will have NVDA speak what is currently focused. This can help if NVDA isn't behaving as you'd expect.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
         "Input help mode" : {
             "description" : "If you wish to learn about what a key does, then you can toggle input help mode on or off. To do this, press NVDA+1 (the number 1) and then press any key. This should help you learn what keys do. To exit input help mode, press NVDA+1 again.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Screen layout." : {
+            "description" : "When you are navigating a webpage, you can enable or disable screen layout. Screen layout tries to make the webpage seem more natural to the visual layout. Therefore, it will present items in a way sort of similar to how they appear on screen. To make items appear more like they do in JAWS, (to make NVDA report only one link per line, or break at more convenient times) disable screen layout. You can quickly toggle this while on a webpage with NVDA+v.",
+            "level" : [
+                "advanced"
+            ]
+        },
+        "Using shortcut keys to navigate the web." : {
+            "description" : "When you are navigating a webpage, you can move around quickly by different page elements. Using the arrow keys lets you move around the webpage one item at a time. This is just like moving around a normal document. There are many shortcut keys available, as you get more familiar with NVDA, you should learn these. They are explained in the users guide, and in the quick reference sheet in NVDA's help menu.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Single letter navigation" : {
+            "description" : "You can use single letter navigation keys on the web, or in certain other places when NVDA is in browse mode. \r\n\r\n1 through 6 on the keyboard moves you through the corresponding heading levels. H does the same, but for all headings. \r\nA is for annotation, \r\nS is for separator, \r\nD is for landmark (general regions on a page)\r\nF is for formfield,\r\nG is for graphic. \r\nK, u, and V are for link, unvisited and visited links\r\n L is for lists and I is for list items, \r\nM is for frames, N is for blocks of text, \r\nQ is for block quotes, E is for edit boxes. R is for radio button, x is for checkboxes, and C is for combo boxes.\r\n\r\nThose are the main navigator keys you will use on the web to help speed up and navigate the web more efficiently. To learn these, go to the commands quick reference sheet in NVDA's help menu.",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Moving by heading around a webpage." : {
+            "description" : "Often you want to move to important items on a webpage. If the webpage is formated correctly, you can move forward by one heading by pressing the h key. To move backwards by that same heading level, use the shift key and h. Usually headings represent areas on web pages that are useful. ",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "not going to Be verbose." : {
+            "description" : "I assume you enjoy playing around with NVDA or reading the users guide. If not, you should go to the preferences menu and switch to intermediate or beginner mode now for this add-on, or it will omit most of the detailed instructions on what different settings dialogs do.",
+            "level" : [
+                "advanced"
+            ]
+        },
+        "General settings" : {
+            "description" : "The general settings dialog allows you to configure general settings for NVDA. These include whether NVDA starts when your computer starts, the current language NVDA speaks when saying things, whether updates are enabled (highly recommended to leave this checked), and more. To open the general settings dialog, go to the NVDA menu (NVDA+n) and then select general settings.",
+            "level" : [
+                "beginner",
+                "intermediate"
+            ]
+        },
+        "General Settings: Save configuration on exit" : {
+            "description" : "This option under general settings allows you to tell NVDA to save your settings when NVDA exits. I recommend checking this, as you will manually have to save your settings if it is not checked. ",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "General Settings: Show exit options when exiting NVDA" : {
+            "description" : "This check box lets you configure whether NVDA will ask you what you want to do before exiting. If this box is checked, NVDA will bring up an exit dialog. This dialog has several options, including letting you restart, exit, or restart with add-ons disabled. Unchecking this box will make NVDA exit silently when you tell NVDA to exit.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "General Settings: Play sounds when starting or exiting NVDA" : {
+            "description" : "This option is a checkbox that, when checked, tells NVDA to play sounds when it starts or exits.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "General Settings: Logging level" : {
+            "description" : "This combo box allows you to choose how much NVDA will log as it's running. Generally users should not need to touch this as not too much is logged by default. However if you are wanting to provide information in a bug report, then it may be a useful option. ",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "General Settings: Automatically start NVDA after I log on to Windows" : {
+            "description" : "If this option is enabled, NVDA will start automatically as soon as you log on to Windows. This option is only available for installed copies of NVDA.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "General Settings: Automatically check for updates to NVDA" : {
+            "description" : "If this is enabled, NVDA will automatically check for updated versions of NVDA and inform you when an update is available. You can also manually check for updates by selecting Check for updates under Help in the NVDA menu.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Synthesizer Selection (NVDA+control+s)" : {
+            "description" : "9.1.2 In the user's guide explains this settings dialog in more detail. \"Synthesizer...\" in the Preferences menu, allows you to select your speech synthesizer, your sound card, and  configure NVDA's ability to lower the volume of audio from other applications.",
+            "level" : [
+                "beginner",
+                "intermediate"
+            ]
+        },
+        "Voice settings." : {
+            "description" : "This dialog allows you to select all the options you can set for your current voice, including, but not limited to, voice, the voice variant, the volume and speech rate, and more. To learn about what options are available, go to the NVDA users guide, section 9.1.3.",
+            "level" : [
+                "beginner",
+                "intermediate"
+            ]
+        },
+        "The Ring" : {
+            "description" : "Want to change things like voice, variant, rate, pitch and the like while using NVDA without having to open voice settings? Holding NVDA + Control, then using left and right arrows to select an option, then using up and down arrows to adjust it will allow you to do so. Note: If you are using laptop keyboard layout, please use NVDA + Control + Shift and the arrows.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "All about the Clipboard" : {
+            "description" : "NVda can speak the text on the clipboard, just press NVDA + C. If you instead wish to see what text you have selected, press NVDA + Shift + up arrow (NVDA+shift+s in laptop mode). It is also possible to use NVDA's own copy functionality. Press NVDA + F9 to set a start marker, move in the text to where you would like to set the end marker, then press NVDA + F10. The text will automatically be copied.",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Opening the NVDA Log" : {
+            "description" : "If you encounter some trouble with NVDA, and need to contact a developer, you may be asked to provide a log. Press NVDA F1 to open up the NVDA log viewer. You can move up and down, and select text just like in any editor.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "detecting progress with progress alerts" : {
+            "description" : "If you wish to change the way NVDA behaves when giving you progress updates, you can simply press NVDA + U to cycle through the modes. The available modes are speech every 10 percent, speech at each 10 percent and beeps every percent, or beeps every percent.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Finding your position in a document" : {
+            "description" : "It may prove useful to find out where you are in a document, to do this, press Any of these commands. If you are using laptop mode, to have NVDA read the current character, press NVDA + NUMPAD 2. To have this happen in desktop mode, press NVDA + dot. here are commands to do much more with finding out where you are, a reference for them is in the keyboard reference sheet in NVDA's help menu.",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "Table Navigation" : {
+            "description" : "You may encounter tables on the web, in a spreadsheet, or in your word processor. Here are a few tips to get you started navigating around them.\r\n\r\nHold Control and Alt, and use left and right to move between columns, and up and down to navigate through the rows. If you wish to move outside the table, press the comma key.",
+            "level" : [
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "The web find dialog" : {
+            "description" : "Often while navigating a webpage, it is convenient to find a known string of text. For example, if you are told to open the \"authorize receipts\" tab of a university procurement center webpage, simply pressing NVDA + Control + F will bring up a dialog allowing you to type text in and NVDA will search for a textual match. The option about case sensitivity controls whether the text match matches letters in both uppercase, or treats capital and lowercase letters the same. This feature works in browse mode documents.",
+            "level" : [
+                "beginner",
+                "intermediate",
+                "advanced"
+            ]
+        },
+        "navigating the system tray." : {
+            "description" : "The system tray, also known as the notification area, is the part of windows where the notifications appear. On this list of icons, there are often application icons. To get there, press windows+b, or tab to it from the desktop.",
+            "level" : [
+                "beginner"
+            ]
+        },
+        "Effectively navigating ribbon menus." : {
+            "description" : "Menus such as the ribbon menus found in office 2007 or later, or the file manager in windows 8 or later require some tricks to effectively navigate with a screen reader. \r\n1. Pressing alt opens these menus, just like pressing alt in other applications opens the menu bars.\r\n2. To navigate across groups like home, insert, and view, press the left or right arrow keys.\r\n3. to open a group, press enter. Down arrow can work sometimes, but isn't consistent.\r\n4. Once you have entered the group you wish, there are subgroups. pressing control + right or left arrow will move you across these sub-groups. For example, on the home tab of word, there is \"edit\", \"style\", \"font\" and more. \r\n5. Then, to find the item you want, press the tab key until you get there. Arrow keys may work, but things can be vertically stacked so this may not provide a consistent experience like pressing tab will.",
+            "level" : [
+                "beginner",
+                "intermediate"
+            ]
+        },
+        "Audio Ducking" : {
+            "description" : "NVDA can lower the volume of background audio. To configure this, select audio ducking from the NVDA synthesizer dialog. You may also press NVDA+shift+d to cycle through the three audio ducking modes at any point.",
             "level" : [
                 "beginner",
                 "intermediate",

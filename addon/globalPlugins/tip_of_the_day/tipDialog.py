@@ -76,11 +76,22 @@ class TipDialog(wx.Frame):
 		self.edit.SetFocus()
 		self.cache = []
 		self.superIndex = 0
+		noShow = True
 		for i in range(len(self.tips)):
 			if  self.level in self.tips[i][1]["level"]:
 				self.cache.append(i)
 				if i == self.index:
 					self.superIndex = len(self.cache)-1
+					noShow = False
+		# when the tips wrap, it'll reset to 0. We should notify the user the tips wrapped however.
+		log.debug("{} {} {}".format(self.index,self.superIndex, self.cache))
+		if noShow:
+			gui.messageBox(
+				#Translators: Message for when the user has seen all possible tips.
+				_("You have seen all possible tips. The add-on will now show you the first tip again."),
+				#Translators: The title of the dialog that shows up when the user has seen all tips.
+				_("Out of Tips")				)
+				
 		self.prepEdit()
 		self.prepButtons()
 
@@ -134,7 +145,10 @@ class TipDialog(wx.Frame):
 
 	def save(self):
 		""" Saves the config. """
-		tipConfig.conf["internal"]["index"] = self.cache[self.superIndex]
+		try:
+			tipConfig.conf["internal"]["index"] = self.cache[self.superIndex+1]
+		except IndexError:
+			tipConfig.conf["internal"]["index"] = -1 #force the dialog at boot next time.
 		tipConfig.conf.save()
 
 def create():
@@ -174,7 +188,9 @@ def getTips():
 	#translators: Error message for if tip reading fails.
 	error = _("Error  loading tips. Your tips file is probably incorrect. Please reinstall it.")
 	try:
-		t=os.path.join(os.path.dirname(__file__), "tips.json")
+		dir = os.path.dirname(__file__)
+		dir = os.path.split(dir)[0]
+		t=os.path.join(dir, "tips.json")
 		tips = Tips(t)
 	except IOError as e:
 		log.debug(e.message)

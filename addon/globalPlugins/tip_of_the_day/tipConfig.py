@@ -1,4 +1,4 @@
-#tipConfig: Config handling for the tip of the day addon.
+#tipConfig: custom Config handling for the tip of the day addon.
 #copyright Derek Riemer 2016.
 #This code is GPL. See NVDA's license.
 #All of NVDA's license and copying conditions apply here, including the waranty disclosure.
@@ -7,7 +7,7 @@ from cStringIO import StringIO
 import config
 import configobj
 import validate
-#adapted from the config in OCR, to be a module.
+#adapted from the config in OCR, to be a module. Isn't using NVDA internal config because it's so custom for now.
 #Uses some of NVDA's internal conventions as well.
 
 configspec = StringIO("""

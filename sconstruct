@@ -8,6 +8,7 @@ import gettext
 import os
 import os.path
 import zipfile
+import shutil
 
 import buildVars
 
@@ -105,6 +106,11 @@ def createAddonBundleFromPath(path, dest):
 				if pathInBundle not in buildVars.excludedFiles: z.write(absPath, pathInBundle)
 	return dest
 
+def copyTips():
+	"""Copies tips from tips.json into the globalPlugins dir"""
+	tipsCommand = Command(os.path.join("addon", "globalPlugins", "tips.json"), "tips.json", Copy("$TARGET", "$SOURCE"))
+	env.Depends(addon, tipsCommand)
+
 def generateManifest(source, dest):
 	with codecs.open(source, "r", "utf-8") as f:
 		manifest_template = f.read()
@@ -139,9 +145,13 @@ for dir in langDirs:
 	env.Depends(translatedManifest, ["buildVars.py"])
 	env.Depends(addon, [translatedManifest, moFile])
 
+
 pythonFiles = expandGlobs(buildVars.pythonSources)
 for file in pythonFiles:
 	env.Depends(addon, file)
+
+#Tips get coppiedcopied.
+copyTips()
 
 #Convert markdown files to html
 createAddonHelp("addon") # We need at least doc in English and should enable the Help button for the add-on in Add-ons Manager
@@ -167,6 +177,5 @@ env.Depends(mergePot, i18nFiles)
 
 # Generate Manifest path
 manifest = env.NVDAManifest(os.path.join("addon", "manifest.ini"), os.path.join("manifest.ini.tpl"))
-
 env.Depends(addon, manifest)
 env.Default(addon)
