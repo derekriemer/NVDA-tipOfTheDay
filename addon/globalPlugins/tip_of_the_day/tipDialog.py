@@ -84,7 +84,6 @@ class TipDialog(wx.Frame):
 					self.superIndex = len(self.cache)-1
 					noShow = False
 		# when the tips wrap, it'll reset to 0. We should notify the user the tips wrapped however.
-		log.debug("{} {} {}".format(self.index,self.superIndex, self.cache))
 		if noShow:
 			gui.messageBox(
 				#Translators: Message for when the user has seen all possible tips.
