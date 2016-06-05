@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""The Tip of the day Addon allows beginner users to receive a tip of the day once a day. See it's documentation for more info."""),
 	# version
-	"addon_version" : "0.5.1-dev",
+	"addon_version" : "1.0-dev",
 	# Author(s)
 	"addon_author" : u"derek Riemer <driemer.riemer@gmail.com>",
 	# URL for the add-on documentation support
