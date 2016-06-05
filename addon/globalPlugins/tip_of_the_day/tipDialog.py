@@ -201,4 +201,3 @@ def getTips():
 		return #Tip readingg failed for some reason.
 	return   tips.tips #tupal of tips.
 
-initialize()

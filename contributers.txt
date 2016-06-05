@@ -1,2 +1,7 @@
-Derek Riemer
-Brandon Cross
+code:
+	Derek Riemer
+Tip creation:
+	Brandon Cross
+	Scott VanDeWalle
+Code Review:
+	Joseph Lee

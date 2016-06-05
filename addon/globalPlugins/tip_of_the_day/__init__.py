@@ -66,6 +66,7 @@ class TipTimeManager:
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
+		tipDialog.initialize()
 		conf = tipConfig.conf
 		try:
 			confVal = conf["internal"]["lastUse"]

@@ -12,7 +12,7 @@ import validate
 
 configspec = StringIO("""
 	[internal]
-		lastUse=float(min=0 default=0)
+		lastUse=float(min=0, default=0)
 		index = integer(min=0, default=0)
 	[user]
 		level = option('not sure', 'beginner', 'intermediate', 'advanced', default='not sure')
