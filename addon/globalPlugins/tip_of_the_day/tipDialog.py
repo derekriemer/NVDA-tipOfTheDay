@@ -11,6 +11,8 @@ import queueHandler
 from logHandler import log
 from tipsReader import Tips
 
+prefs = mainDialog = None
+
 def confDialog(evt = None, createAfter = False):
 	conf = tipConfig.conf
 	choices = [
@@ -166,17 +168,30 @@ def create():
 
 
 def initialize():
+	global prefs, mainDialog
 	conf = tipConfig.conf
 	if conf['user']['level'] == 'not sure': #The default pop up a dialog.
 		wx.CallAfter(confDialog, createAfter = True) #pop the dialog when ready.
 	menu = gui.mainFrame.sysTrayIcon.menu
 	prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 	#Translators: Message for getting a tip of the day manually.
-	item = menu.Append(wx.ID_ANY, _("Tip of the day"))
+	mainDialog = item = menu.Append(wx.ID_ANY, _("Tip of the day"))
 	menu.Bind(wx.EVT_MENU, onCreateTip, item)
 	#Translators: Message for setting the tip of the day preferences.
-	item = prefsMenu.Append(wx.ID_ANY, _("Tip of the day settings ..."))
+	prefs = item = prefsMenu.Append(wx.ID_ANY, _("Tip of the day settings ..."))
 	menu.Bind(wx.EVT_MENU, confDialog, item)
+
+def terminate():
+	global prefs, mainDialog
+	try:
+		gui.mainFrame.sysTrayIcon.preferencesMenu.RemoveItem(prefs)
+	except wx.PyDeadObjectError:
+		pass
+	try:
+		gui.mainFrame.sysTrayIcon.menu.RemoveItem(mainDialog)
+	except wx.PyDeadObjectError:
+		pass
+
 
 def onCreateTip(evt):
 	create()

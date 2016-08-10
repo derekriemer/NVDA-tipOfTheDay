@@ -83,7 +83,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready.
 		self.purger() #gracefully remove dead timers.
 		lastUse.alert(self) # runs a timer over and over every few minutes, and when the specified action happens, calls -the callback specified.
-	
+
 	def __call__(self): # calling this object with no arguments will work. This way we can use the class as the object to call.
 		queueHandler.queueFunction(queueHandler.eventQueue, tipDialog.create) #This should queue this to open in the future when NVDA is ready. Seems to prevent an issue with the dialog not appearing thince this gets called randomly.
 		lastUse = TipTimeManager(time.time())
@@ -97,6 +97,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for i in globalVars.TOD_timers:
 			if i.is_alive():
 				i.cancel()
+		tipDialog.terminate()
 	
 	def purger(self):
 			#timers might have died. Filter the global timers list so that dead timers can be garbage collected.
