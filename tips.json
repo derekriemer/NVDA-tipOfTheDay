@@ -3,7 +3,7 @@
     "appname" : null,
     "tips" : {
         "Welcome" : {
-            "description" : "The tip of the day add-on will give you a tip every day. \r\nThanks for using this add-on. \r\nAt anny point, you may request a tip from the add-on by choosing \"tip Of The Day\" from the NVDA menu. To do this, press NVDA+N, and then press up arrow to find tip of the day.\r\nThe NVDA key is insert or caps lock depending on your settings.",
+            "description" : "The tip of the day add-on will give you a tip every day. \r\nThanks for using this add-on. \r\nAt any point, you may request a tip from the add-on by choosing \"tip Of The Day\" from the NVDA menu. To do this, press NVDA+N and then press the up arrow to find the tip of the day menu item.\r\nThe NVDA key is either insert or caps lock depending on your settings.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -11,7 +11,7 @@
             ]
         },
         "The NVDA Key" : {
-            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\r\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the general settings menu.",
+            "description" : "The NVDA key is either the insert, extended insert, or caps lock key.\r\nTo use the NVDA key, you should configure NVDA to use a key. By default, the NVDA key is set to the two insert keys. The key that is long and skinny on the number pad is the insert key. Also, the extended insert key is probably towards the top row of keys. To set your NVDA keys, open the keyboard settings dialog with the NVDA key and the letter n, and then find keyboard settings in the preferences menu.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -19,7 +19,7 @@
             ]
         },
         "Accessing the NVDA Menu." : {
-            "description" : "To access the NVDA menu, you should be able to press the NVDA key, and the letter N at the same time.",
+            "description" : "To access the NVDA menu, you can press the NVDA key, and the letter N at the same time.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -27,14 +27,14 @@
             ]
         },
         "check time and date" : {
-            "description" : "To check the time hold down the nvda key and press f 12.\r\nTo check the date, hold down the nvda key and press f 12 twice quickly.",
+            "description" : "To check the time, hold down the nvda key and press f12.\r\nTo check the date, hold down the nvda key and press f12 twice quickly.",
             "level" : [
                 "beginner",
                 "intermediate"
             ]
         },
         "Getting help" : {
-            "description" : "To find help, use the NVDA key and N (open the NVDA menu), then go to help. There is a users guide and quick key reference sheet.",
+            "description" : "To find help, use the NVDA key and N (open the NVDA menu), then select help from the menu. in this sub-menu, you will find a users guide and a quick key reference sheet to help you learn the key combinations.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -42,7 +42,7 @@
             ]
         },
         "Preferences" : {
-            "description" : "To customize NVDA, use the NVDA key and N to open the NVDA menu, and then open the preferences sub-menu. Then press enter on the preferences you want to change and make the changes.",
+            "description" : "To customize NVDA, use the NVDA key and N to open the NVDA menu, and then open the preferences sub-menu. Then press enter on the item whos preferences you wish to change and make any changes.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -50,14 +50,14 @@
             ]
         },
         "Making NVDA start automatically when your computer starts" : {
-            "description" : "You can make NVDA boot automatically when your computer starts. To do this:\r\n1.Go to the NVDA menu and then preferences.\r\n2.Open the general settings.\r\n3. Go to the option that tells you about starting NVDA after you log onto windows.\r\n4. Check this item.\r\n5. Press the Okay button, or simply press enter.",
+            "description" : "You can make NVDA boot automatically when your computer starts. To do this:\r\n1.  Select preferences from the NVDA menu (NVDA+N).\r\n2.  Open the general settings.\r\n3.  Navigate to the option called automatically start nvda after I log onto windows.\r\n4.  Check this item by pressing space.\r\n5.  Save the change by pressing the OK button, or pressing the enter key.",
             "level" : [
                 "beginner",
                 "intermediate"
             ]
         },
         "read active window" : {
-            "description" : "To read the entire active window, hold down the nvda key and press the letter b",
+            "description" : "To read the entire active window, hold down the nvda key and press the letter b.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -73,7 +73,7 @@
             ]
         },
         "Making NVDA speek on the logon screen" : {
-            "description" : "Here is how to make NVDA speak on the logon screen. \r\nThe logon screen in windows is where you put your password when you log in. This will also make NVDA read secure screens like those that come up when you install programs. Note, that you must be a system administrator to do this. If you had to have someone who had permission install NVDA for you, you probably are not a system administrator. If you are a system administrator, follow these steps, otherwise, you need to consult your system administrator for more information.\r\n1. Press NVDA+N to go to the NVDA menu. Remember that the NVDA key is the key you configured earlier which is probably insert or caps-lock.\r\n2. Press the down arrow to get to the preferences menu.\r\n3. Go to the general settings.\r\n4. Press enter when you get there, and press tab until you hear NVDA say \"Use NVDA on the Windows logon screen (requires administrator privileges)\" and then press the space bar. This will check the box.\r\n5. Now press tab and you'll hear \"Use currently saved settings on the logon and other secure screens (requires administrator privileges)\"\r\n6. Press this button and press the yes button there.\r\n7. Now press okay when the general settings dialog comes back up.",
+            "description" : "The windows logon screen is where you type your account password, if you have one, when you log in. Performing these steps will also make NVDA read the windows security screen (the screen that comes up when control+alt+delete is pressed), as well as the user account control prompts that come up when you install programs, etc. \r\n\r\nNote: You must be a system administrator to set this up. If you had to have someone who had permission install NVDA for you, you probably are not a system administrator. If you are a system administrator, follow these steps, otherwise, consult your administrator for more information.\r\n\r\nTo make NVDA speak on the logon screen: \r\n1. Press NVDA+N to go to the NVDA menu. Remember that the NVDA key is the key you configured earlier which is probably insert or caps-lock.\r\n2. Press the down arrow to get to the preferences menu.\r\n3. select general settings.\r\n4. Press tab until you hear NVDA say \"Use NVDA on the Windows logon screen (requires administrator privileges)\." Press the space bar. This will check the box.\r\n5. Now press tab and you'll hear \"Use currently saved settings on the logon and other secure screens (requires administrator privileges)\"\r\n6. Press this button and press the yes button in the resulting dialog box.\r\n7. Now press okay when the general settings dialog comes back up.",
             "level" : [
                 "beginner"
             ]
@@ -98,8 +98,8 @@
                 "advanced"
             ]
         },
-        "Making NVDA Restart" : {
-            "description" : "If you installed NVDA (you aren't running a portible copy) you can quickly restart NVDA. To do this, press Ctrl+Alt+n.",
+        "Restarting NVDA" : {
+            "description" : "If you installed NVDA and consequently  aren't running a portible copy, you can quickly restart NVDA. To do this, press Ctrl+Alt+n This requires that you had checked the box during installation called \"Create desktop icon and shortcut key (control+alt+N)\".",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -125,8 +125,8 @@
                 "beginner"
             ]
         },
-        "Laptop Keyboard layout" : {
-            "description" : "If you use a laptop, or if you would prefer to not use the number pad to control NVDA, you can set NVDA up to use a laptop keyboard layout. To do this, select laptop keyboard layout from the keyboard preferences.",
+        "using the Laptop Keyboard layout" : {
+            "description" : "If you use a laptop, or if you would prefer to not use the number pad to control NVDA, you can set NVDA up to use a laptop keyboard layout. To do this, select laptop keyboard layout from the keyboard preferences dialog.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -149,8 +149,8 @@
                 "advanced"
             ]
         },
-        "Screen layout." : {
-            "description" : "When you are navigating a webpage, you can enable or disable screen layout. Screen layout tries to make the webpage seem more natural to the visual layout. Therefore, it will present items in a way sort of similar to how they appear on screen. To make items appear more like they do in JAWS, (to make NVDA report only one link per line, or break at more convenient times) disable screen layout. You can quickly toggle this while on a webpage with NVDA+v.",
+        "Using screen layout." : {
+            "description" : "When navigating a webpage, you can enable or disable screen layout. Screen layout tries to make the webpage seem more natural to the visual layout. Therefore, it will present items in a way sort of similar to how they appear on screen. To make items appear more like they do in JAWS, (to make NVDA report only one link per line, or break at more convenient times) disable screen layout. You can quickly toggle this while on a webpage with NVDA+v.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -158,7 +158,7 @@
             ]
         },
         "Using shortcut keys to navigate the web." : {
-            "description" : "When you are navigating a webpage, you can move around quickly by different page elements. Using the arrow keys lets you move around the webpage one item at a time. This is just like moving around a normal document. There are many shortcut keys available, as you get more familiar with NVDA, you should learn these. They are explained in the users guide, and in the quick reference sheet in NVDA's help menu.",
+            "description" : "When navigating a webpage, you can move around quickly using different page elements as anker points. Using the arrow keys lets you move around the webpage one item at a time. This is just like moving around a normal document. There are many shortcut keys available, as you get more familiar with NVDA, you should learn these. They are explained in the users guide, and in the quick reference sheet in NVDA's help menu.",
             "level" : [
                 "beginner"
             ]
@@ -171,7 +171,7 @@
             ]
         },
         "Moving by heading around a webpage." : {
-            "description" : "Often you want to move to important items on a webpage. If the webpage is formated correctly, you can move forward by one heading by pressing the h key. To move backwards by that same heading level, use the shift key and h. Usually headings represent areas on web pages that are useful. ",
+            "description" : "Often you want to move to important items on a webpage. If the webpage is formatted correctly, you can move forward by one heading by pressing the h key. To move backwards by that same heading level, use the shift key and h. Usually headings represent areas on web pages that are useful. ",
             "level" : [
                 "beginner"
             ]
@@ -226,14 +226,14 @@
             ]
         },
         "Synthesizer Selection (NVDA+control+s)" : {
-            "description" : "9.1.2 In the user's guide explains this settings dialog in more detail. \"Synthesizer...\" in the Preferences menu, allows you to select your speech synthesizer, your sound card, and  configure NVDA's ability to lower the volume of audio from other applications.",
+            "description" : "\"Synthesizer...\" in the Preferences menu, allows you to select your speech synthesizer, your sound card, and  configure NVDA's ability to lower the volume of audio from other applications.\r\n\r\n9.1.2 In the user's guide explains this settings dialog in more detail.",
             "level" : [
                 "beginner",
                 "intermediate"
             ]
         },
         "Voice settings." : {
-            "description" : "This dialog allows you to select all the options you can set for your current voice, including, but not limited to, voice, the voice variant, the volume and speech rate, and more. To learn about what options are available, go to the NVDA users guide, section 9.1.3.",
+            "description" : "This dialog allows you to select all the options you can set for the current voice, including, but not limited to: voice,  voice variant,  volume and speech rate and more. To learn about what options are available, select \"user guide\" from the NVDA help menu and navigate to section 9.1.3.",
             "level" : [
                 "beginner",
                 "intermediate"
@@ -248,14 +248,14 @@
             ]
         },
         "All about the Clipboard" : {
-            "description" : "NVda can speak the text on the clipboard, just press NVDA + C. If you instead wish to see what text you have selected, press NVDA + Shift + up arrow (NVDA+shift+s in laptop mode). It is also possible to use NVDA's own copy functionality. Press NVDA + F9 to set a start marker, move in the text to where you would like to set the end marker, then press NVDA + F10. The text will automatically be copied.",
+            "description" : "NVda can speak the text on the clipboard, just press NVDA + C. If you wish to see what text you have selected instead, press NVDA + Shift + up arrow (NVDA+shift+s in laptop mode). It is also possible to use NVDA's own copy functionality. navigate to the beginning of your selection and press NVDA + F9 to set a start marker, move to where you would like to set the end marker, then press NVDA + F10. The text will automatically be selected. To copy it, press NVDA+f10 again.\r\n\r\nNote: the functionality of NVDA+f10 changed in NVDA 2016.3. In previous versions, text would automatically be coppied on selection when pressing NVDA+f10, but now, the first press only selects the text, with the second press copying the selection. If you would like to restore the old way of doing things, use an add-on like classic selection.",
             "level" : [
                 "intermediate",
                 "advanced"
             ]
         },
         "detecting progress with progress alerts" : {
-            "description" : "If you wish to change the way NVDA behaves when giving you progress updates, you can simply press NVDA + U to cycle through the modes. The available modes are speech every 10 percent, speech at each 10 percent and beeps every percent, or beeps every percent.",
+            "description" : "If you wish to change the way NVDA behaves when giving you progress updates, press NVDA + U to cycle through the modes. The available modes are: speech every 10 percent, speech at each 10 percent and beeps every 1 percent, or beeps every percent.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -263,14 +263,14 @@
             ]
         },
         "Finding your position in a document" : {
-            "description" : "It may prove useful to find out where you are in a document, to do this, press Any of these commands. If you are using laptop mode, to have NVDA read the current character, press NVDA + NUMPAD 2. To have this happen in desktop mode, press NVDA + dot. To do much more with finding out where you are, a reference for them is in the keyboard reference sheet in NVDA's help menu.",
+            "description" : "It may prove useful to find out where you are in a document. To do this, press Any of the following commands. If you are using laptop mode, to have NVDA read the current character, press NVDA + NUMPAD 2. To have this happen in desktop mode, press NVDA + dot. To do much more with finding out where you are, the commands are listed in the keyboard reference sheet in NVDA's help menu.",
             "level" : [
                 "intermediate",
                 "advanced"
             ]
         },
         "Focus and browse mode, part 1." : {
-            "description" : "When you are navigating a web page, you will want to enter text into an edit field. To do this, You need to switch to browse mode. To quickly do this on an edit field, press enter when you approach the field.",
+            "description" : "When you are navigating a web page and want to enter text into an edit field, you need to switch to browse mode. To quickly do this on an edit field, press enter when you approach the field. Note that if you're using the tab and shift+tab keys to navigate the page, you don't have to do this, as the modes are switched automatically",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -278,7 +278,7 @@
             ]
         },
         "Browse mode and focus mode, Part Two" : {
-            "description" : "When a webpage first opens, it usually opens up in browse mode. You can move around the page like you would a normal document.\r\nOn a well designed page, you may be able to press the letter d to move between regions of the page. some regions of the pages are called landmarks. They indicate parts of the page, such as main, complementary, and contentinfo.\r\n* Main is the main part of the page. It should contain the contents of most importance.\r\n* Contentinfo is information that is in a footer and isn't directly part of the page.\r\n* navigation is used for navigation menus, or other controls that help you navigate the web site or online application.\r\n* there are other landmarks, and web authors can provide custom regions as well. If this is done, you will hear \"region\" with a custom name provided before this. \r\nafter you use these quick keys to find the region you want, you can read just like you would read a normal document. For example, you might find the home page of a restaurants website, read using the arrow keys about them, and then press d to move to the navigation landmark. After doing this, you could find the link to their contact and location page, (Using the arrow keys, and control + arrow keys) and press enter to open the contact and location page. Once it is up, you could press d until you hear \"main landmark\" and use this to find their address.\r\nNext lesson, Using headings and other controls.",
+            "description" : "When a webpage first opens, it usually opens in browse mode. In this mode, you can move around the page like you would a normal document.\r\nOn a well designed page, you may be able to press the letter d to move between regions (called land marks) of the page. They indicate parts of the page, such as main, complementary, and content-info.\r\n* Main is the main part of the page. It should contain the contents of most importance.\r\n* Contentinfo is information that is in a footer and isn't directly part of the page.\r\n* navigation is used for navigation menus, or other controls that help you navigate the web site or online application.\r\n* there are other landmarks, and web authors can provide custom regions as well. If this is done, you will hear \"region\" with a custom name provided before this. \r\nafter you use these quick keys to find the region you want, you can read just like you would read a normal document. For example, you might find the home page of a restaurants website, read using the arrow keys about them, and then press d to move to the navigation landmark. After doing this, you could find the link to their contact and location page, (Using the arrow keys, and control + arrow keys) and press enter to open the contact and location page. Once it is up, you could press d until you hear \"main landmark\" and use this to find their address."
             "level" : [
                 "beginner",
                 "intermediate",
@@ -293,7 +293,7 @@
             ]
         },
         "The web find dialog" : {
-            "description" : "Often while navigating a webpage, it is convenient to find a known string of text. For example, if you are told to open the \"authorize receipts\" tab of a university procurement center webpage, simply pressing NVDA + Control + F will bring up a dialog allowing you to type text in and NVDA will search for a textual match. The option about case sensitivity controls whether the text match matches letters in both uppercase, or treats capital and lowercase letters the same. This feature works in browse mode documents.",
+            "description" : "Often while navigating a webpage, it is convenient to find a known string of text. For example, if you are told to open the \"authorize receipts\" tab of a university procurement center webpage, simply pressing NVDA + Control + F will bring up a dialog allowing you to type a search query and have NVDA search for a textual match. The option regarding case sensitivity controls whether the text matches letters in both uppercase, or treats capital and lowercase letters the same. This feature works in browse mode documents.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -307,14 +307,14 @@
             ]
         },
         "Effectively navigating ribbon menus." : {
-            "description" : "Menus such as the ribbon menus found in office 2007 or later, or the file manager in windows 8 or later require some tricks to effectively navigate with a screen reader. \r\n1. Pressing alt opens these menus, just like pressing alt in other applications opens the menu bars.\r\n2. To navigate across groups like home, insert, and view, press the left or right arrow keys.\r\n3. to open a group, press enter. Down arrow can work sometimes, but isn't consistent.\r\n4. Once you have entered the group you wish, there are subgroups. pressing control + right or left arrow will move you across these sub-groups. For example, on the home tab of word, there is \"edit\", \"style\", \"font\" and more. \r\n5. Then, to find the item you want, press the tab key until you get there. Arrow keys may work, but things can be vertically stacked so this may not provide a consistent experience like pressing tab will.",
+            "description" : "Menus such as the ribbon menus found in office 2007 or later, or file explorer in windows 8 or later require some tricks to effectively navigate with a screen reader. \r\n1. Pressing alt opens these menus, just like pressing alt in other applications opens the menu bars.\r\n2. To navigate across groups like home, insert, and view, press the left or right arrow keys.\r\n3. to open a group, press enter. Down arrow can work sometimes, but isn't consistent.\r\n4. Once you have entered the group you wish, there are subgroups. pressing control + right or left arrow will move you across these sub-groups. For example, on the home tab of word, there is \"edit\", \"style\", \"font\" and more. \r\n5. Then, to find the item you want, press the tab key until you get there. Arrow keys may work, but things can be vertically stacked so this may not provide a consistent experience.",
             "level" : [
                 "beginner",
                 "intermediate"
             ]
         },
         "Audio Ducking" : {
-            "description" : "NVDA can lower the volume of background audio. To configure this, select audio ducking from the NVDA synthesizer dialog. You may also press NVDA+shift+d to cycle through the three audio ducking modes at any point.",
+            "description" : "NVDA can lower the volume of background audio either when it is speaking, or always. To configure this, select audio ducking from the NVDA synthesizer dialog. You may also press NVDA+shift+d to cycle through the three audio ducking modes at any point.",
             "level" : [
                 "beginner",
                 "intermediate",
@@ -330,7 +330,7 @@
             ]
         },
         "Audible Feedback for Spelling Mistakes or Typos" : {
-            "description" : "Since NVDA version 2016.2, you can now hear audible feedback when you make a spelling mistake. Report Spelling errors must be on in the Document Formatting Dialog and Play sound for spelling errors while typing must be on in the Keyboard Settings dialog (which is the default). You must also be working from within an app that checks your spelling and marks spelling errors with a red squiggly line. For instance, Firefox and Microsoft Word will do this, as will Chrome when working in a rich text editor.",
+            "description" : "Since NVDA version 2016.2, you can now hear audible feedback when you make a spelling mistake. Report Spelling errors must be on in the Document Formatting Dialog and Play sound for spelling errors while typing must be on in the Keyboard Settings dialog (which is the default). You must also be working from within an app that checks your spelling and marks spelling errors with a red squiggly line. Firefox and Microsoft Word will do this, as will google Chrome when working in a rich text editor.",
             "level" : [
                 "beginner",
                 "intermediate",
